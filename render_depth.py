@@ -102,7 +102,7 @@ def pointcloud(depth):
         width = depth.shape[1]
 
         mask = np.where(depth > 0)
-        
+        False
         d = depth[mask]
         x = mask[1] * d
         y = mask[0] * d
@@ -128,8 +128,8 @@ if __name__ == "__main__":
         s.add_geometry([pcls, trimesh.load('watertight.obj')])
         s.show()
     
-    shapenet_path = Path('/scratch/liyzhu/MA_Thesis/ShapeNetCore.v2/room_5cate')
-    samples_path = Path('/scratch/liyzhu/MA_Thesis/ShapeNetCore.v2/room_5cate_samples')
+    shapenet_path = Path('/scratch/liyzhu/MA_Thesis/ShapeNetCore.v2/room_5cate_v2')
+    samples_path = Path('/scratch/liyzhu/MA_Thesis/ShapeNetCore.v2/room_5cate_v2_sdf')
     
     # classes = os.listdir(shapenet_path)
     for cls in os.listdir(shapenet_path):
